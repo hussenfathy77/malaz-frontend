@@ -1,0 +1,59 @@
+{
+  "expo": {
+    "name": "mobile",
+    "slug": "mobile",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "Malaz needs your location to find nearby mental health specialists.",
+        "NSLocationAlwaysUsageDescription": "Malaz uses your location to find nearby doctors.",
+        "NSCameraUsageDescription": "Malaz needs camera access to update your profile picture.",
+        "NSPhotoLibraryUsageDescription": "Malaz needs photo library access to upload your profile picture or certificate."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#E6F4FE",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE"
+      ],
+      "config": {
+        "googleMaps": {
+          "apiKey": "YOUR_GOOGLE_MAPS_API_KEY"
+        }
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-status-bar",
+      "expo-font",
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Malaz uses your location to find nearby mental health specialists."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Malaz needs access to your photos to update your profile picture.",
+          "cameraPermission": "Malaz needs access to your camera to take a profile photo."
+        }
+      ]
+    ]
+  }
+}
